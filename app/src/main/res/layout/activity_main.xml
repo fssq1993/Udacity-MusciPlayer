@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.music.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--tab1-->
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在播放"
+                    android:padding="20dp"
+                    android:layout_gravity="center"/>
+                <ImageView
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pic1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/speed_down"
+                        style="@style/tab1_palying_button"
+                        android:src="@drawable/speed_down" />
+                    <ImageView
+                        android:id="@+id/pause"
+                        style="@style/tab1_palying_button"
+                        android:src="@drawable/pause" />
+                    <ImageView
+                        android:id="@+id/speed_up"
+                        style="@style/tab1_palying_button"
+                        android:src="@drawable/speed_up" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:gravity="center"
+                        android:background="#F48FB1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textColor="#FFF"
+                        android:text="歌手信息"
+                        android:id="@+id/singer"/>
+                    <TextView
+                        android:gravity="center"
+                        android:background="#EC407A"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textColor="#FFF"
+                        android:text="专辑详情"
+                        android:id="@+id/album"/>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--tab2-->
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/tab2_image_gallery"
+                            android:src="@drawable/pic1" />
+
+                        <ImageView
+                            style="@style/tab2_image_gallery"
+                            android:src="@drawable/pic2" />
+
+                        <ImageView
+                            style="@style/tab2_image_gallery"
+                            android:src="@drawable/pic3" />
+
+                        <ImageView
+                            style="@style/tab2_image_gallery"
+                            android:src="@drawable/pic4" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/fm"
+                            style="@style/tab2_image_button"
+                            android:src="@drawable/b1" />
+
+                        <TextView
+                            style="@style/tab2_image_button_text"
+                            android:layout_below="@id/fm"
+                            android:text="私人FM" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/earphone"
+                            style="@style/tab2_image_button"
+                            android:src="@drawable/b2" />
+
+                        <TextView
+                            style="@style/tab2_image_button_text"
+                            android:layout_below="@id/earphone"
+                            android:text="每日推荐（可以点！！！）" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/rank"
+                            style="@style/tab2_image_button"
+                            android:src="@drawable/b3" />
+
+                        <TextView
+                            style="@style/tab2_image_button_text"
+                            android:layout_below="@id/rank"
+                            android:text="热歌榜" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E8EAF6" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:gravity="center"
+                    android:text="未完待续..."/>
+            </LinearLayout>
+
+<!--tab3-->
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5b89ff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t3_1"
+                    style="@style/song"
+                    android:background="#394324"
+                    android:text="徐佳莹 - 不怕庆祝"
+                    android:clickable="true"/>
+
+                <TextView
+                    android:id="@+id/t3_2"
+                    style="@style/song"
+                    android:background="#394324"
+                    android:text="牛奶咖啡 - 明天你好"
+                    android:clickable="true"/>
+                <TextView
+                    android:id="@+id/t3_3"
+                    style="@style/song"
+                    android:background="#394324"
+                    android:text="BoA - Last Christmas"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+<!--Tab4-->
+            <LinearLayout
+                android:id="@+id/tab4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5b89ff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t4_1"
+                    style="@style/song"
+                    android:text="音乐商店" />
+
+                <TextView
+                    android:id="@+id/t4_2"
+                    style="@style/song"
+                    android:text="充值会员（暂不可点）" />
+                <TextView
+                    android:id="@+id/t4_3"
+                    style="@style/song"
+                    android:text="购买记录（暂不可点）" />
+                <TextView
+                    android:id="@+id/t4_4"
+                    style="@style/song"
+                    android:text="个人信息（暂不可点）" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</TabHost>
